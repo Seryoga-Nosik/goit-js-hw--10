@@ -13,7 +13,7 @@ function onInputType(e) {
 
   const country = e.target.value;
 
-  if (country === '' || country.trim() === '') return;
+  if (country.trim() === '') return;
   fetchCountries(country)
     .then(renderMarkup)
     .catch(error => Notify.failure('Oops, there is no country with that name'));
